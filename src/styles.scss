@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Roboto&display=swap');
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+$chapterTitleColor: #343a40;
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    app-footer {
+        margin-top: auto;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', cursive;
+}
+.chapter {
+    .info {
+        align-items: flex-start;
+        display: flex;
+        gap: 2em;
+
+        .thumbnail {
+            flex-basis: 35%;
+
+            img {
+                width: 100%;
+            }
+        }
+        .description {
+            align-items: flex-start;
+            display: flex;
+            flex-basis: 75%;
+            flex-direction: column;
+
+            h2 {
+                color: lighten($chapterTitleColor, 30%);
+                font-size: 1.7em;
+            }
+        }
+        .player {
+            margin: 1.5em 0;
+            width: 100%;
+
+            iframe {
+                height: 167px;
+                width: 100%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .chapter {
+        .info {
+            align-items: center;
+            flex-direction: column;
+
+            .thumbnail {
+                width: 60%;
+            }
+        }
+    }
+}

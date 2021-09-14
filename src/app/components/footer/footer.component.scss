@@ -1,0 +1,16 @@
+
+
+$backgroundColor: #343a40;
+$textColor: #888;
+
+footer {
+    background-color: $backgroundColor;
+    padding: 6em 0 4em 0;
+
+    span {
+        color: $textColor;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

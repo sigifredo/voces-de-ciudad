@@ -1,0 +1,33 @@
+
+
+$linkColor: #888;
+$linkColorHover: #ff5500;
+$shadowColor: #cecece;
+$logoHl: #ff5500;
+
+.navbar {
+    // box-shadow: 0 0 2px $shadowColor;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    padding: 2em 3em;
+
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+    .nav-item {
+        margin: 0 0.5em;
+
+        .nav-link {
+            color: $linkColor;            
+            font-weight: 500;
+            transition: color 0.3s;
+    
+            &.active {
+                color: $linkColorHover;
+            }
+            &:hover {
+                color: $linkColorHover
+            }
+        }
+    }
+}

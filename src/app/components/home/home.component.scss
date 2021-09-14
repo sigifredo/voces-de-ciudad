@@ -1,0 +1,175 @@
+
+
+$btnTxtColor: #888;
+$btnBorderColor: #e9e9e9;
+$btnBgColor: #323b3c;
+$evenBgColor: #454545;
+$titleColor: #ff5500;
+$oddSectionBg: #f8f9f9;
+
+// ::ng-deep {
+//     ngb-carousel {
+//         &:focus {
+//             outline-color: transparent;
+//         }
+//     }
+// }
+h2 {
+    color: $titleColor;
+    font-size: 2.1em;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+section {
+    padding: 4em 0;
+
+    &:nth-child(even) {
+        background-color: $oddSectionBg;
+    }
+    h3 {
+        color: lighten(black, 70%);
+        font-size: 1em;
+        text-align: center;
+    }
+}
+.banner {
+    position: relative;
+
+    .caption {
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        bottom: 0;
+        color: white;
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        left: 0;
+        padding: 2em 0;
+        position: absolute;
+        width: 100%;
+
+        img {
+            width: 100px;
+        }
+        .text {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &> * {
+                margin: 0;
+            }
+        }
+    }
+    .img-wrapper {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        animation: animated-background 120s linear infinite;
+        height: calc(100vh - 104px);
+        outline-color: transparent;
+        width: 100%;
+    }
+}
+.btn {
+    border-radius: 1em;
+    display: block;
+    font-size: 1.2em;
+    letter-spacing: 0.17em;
+    margin: 2em auto 0 auto;
+    padding: 0.2em 1.2em;
+    width: max-content;
+
+    &.btn-outline-primary {
+        color: $btnTxtColor;
+        border: 2px solid $btnBorderColor;
+
+        &:hover, &:active {
+            background-color: $btnBgColor;
+            border-color: $btnBgColor;
+            color: white;
+        }
+    }
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+.members {
+    align-items: flex-start;
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    margin: 2em 0;
+
+    article {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        max-width: 150px;
+
+        img {
+            border-radius: 100%;
+            width: 100%;
+        }
+        span {
+            text-align: center;
+        }
+    }
+}
+.trending {
+    .news {
+        margin: 2em 0;
+
+        .chapter {
+            &:not(:last-child) {
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-image: linear-gradient(90deg,transparent,#dee2e6,transparent) 100% 1;
+            }
+            padding: 4em 0;
+
+            h2 {
+                font-size: 1.3em;
+                text-align: left;
+            }
+            span {
+                color: lighten(black, 50%);
+                font-style: italic;
+            }
+        }
+    }
+}
+.scroll-top {
+    cursor: pointer;
+    bottom: 50px;
+    filter: drop-shadow(0px 0px 4px lighten(black, 40%));
+    position: fixed;
+    right: 50px;
+    width: 70px;
+    z-index: 100;
+}
+@keyframes animated-background {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .members {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

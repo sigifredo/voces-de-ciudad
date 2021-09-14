@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">Voces de ciudad</a>
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed" id="navbarNav">
+        <ul class="navbar-nav">
+            <li *ngIf="isInIndex == false" class="nav-item">
+                <a class="nav-link" routerLink="">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="capitulos">Capítulos</a>
+            </li>
+            <li class="nav-item">
+                <a href="#members" class="nav-link" routerLinkActive="active">Equipo</a>
+            </li>
+            <li class="nav-item">
+                <a href="#trending" class="nav-link" routerLinkActive="active">Tendencias</a>
+            </li>
+        </ul>
+    </div>
+</nav>

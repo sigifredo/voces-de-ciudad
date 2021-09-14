@@ -1,0 +1,17 @@
+
+$titleColor: #ff5500;
+
+section {
+    margin: 4em 0;
+}
+.chapter {
+    padding: 3em 0;
+
+    .info {
+        .description {
+            h2 {
+                    color: $titleColor;
+            }
+        }
+    }
+}
